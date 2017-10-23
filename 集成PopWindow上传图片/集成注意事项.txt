@@ -1,0 +1,18 @@
+1、复制代码后
+
+2、添加权限和
+
+ 	<provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.mypopupwindow.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+PS：其中android:authorities="com.example.mypopupwindow.fileprovider"修改包名，并和MainActivity中一个方法对应修改！！
+否则一直安装出错！！（原因是已经有的包名，上一个项目覆盖了）
+
+实在不行，查看第一行代码！！！
